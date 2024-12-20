@@ -350,7 +350,7 @@
                                         <li><a href="index-4.html">Home 4</a></li>
                                     </ul>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="page-about.html">About</a>
                                 </li>
                                 <li><a href="shop-grid-right.html">Shop <i class="fi-rs-angle-down"></i></a>
@@ -460,7 +460,7 @@
                                 </li>
                                 <li>
                                     <a href="page-contact.html">Contact</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </nav>
                     </div>
