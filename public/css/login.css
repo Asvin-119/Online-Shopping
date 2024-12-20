@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(8,129,120);
+  background: radial-gradient(circle, rgba(8,129,120,1) 0%, rgba(8,129,120,0.5606617647058824) 100%);
+}
+
+::selection {
+  color: #fff;
+  background: #088178;
+}
+
+.wrapper {
+  width: 380px;
+  padding: 40px 30px 10px 30px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+  font-size: 33px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#333, #088178);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper form {
+  margin: 20px 0;
+}
+
+form .field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form .field.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Styles for the "Remember Me" section */
+form .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+form .remember-me input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #088178; /* Checkbox color */
+}
+
+form .remember-me label {
+  cursor: pointer;
+}
+
+form .remember-me input:focus-visible {
+  outline: 2px solid #088178;
+}
+
+@keyframes shake {
+  0%, 100% {
+    margin-left: 0px;
+  }
+  20%, 80% {
+    margin-left: -12px;
+  }
+  40%, 60% {
+    margin-left: 12px;
+  }
+}
+
+form .field .input-area {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+form input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  caret-color: #088178;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+
+form .field input:focus,
+form .field.valid input {
+  border-color: #088178;
+}
+
+form .field.shake input,
+form .field.error input {
+  border-color: #dc3545;
+}
+
+.field .input-area i {
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input-area .icon {
+  left: 15px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+
+.input-area .error-icon {
+  right: 15px;
+  color: #dc3545;
+}
+
+form input:focus ~ .icon,
+form .field.valid .icon {
+  color: #088178;
+}
+
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon {
+  color: #bfbfbf;
+}
+
+form input::placeholder {
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .field .error-txt {
+  color: #dc3545;
+  text-align: left;
+  margin-top: 5px;
+}
+
+form .field .error {
+  display: none;
+}
+
+form .field.shake .error,
+form .field.error .error {
+  display: block;
+}
+
+.wrapper a {
+  color: #088178;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+form .submit-btn button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #088178;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+form .submit-btn button:hover {
+  background: #066f5c;
+}
